@@ -253,14 +253,28 @@ public class CentralPacientes {
      * Retorna la cantidad de hombres que hay en la lista
      */
     public int cantHombres() {
-        return 0;
+        int cont = 0;
+        Paciente p = primero;
+        while(p != null) {
+            if (p.darSexo() == 1)
+                cont += 1;
+            p = p.darSiguiente();
+        }
+        return cont;
     }
 
     /**
      * Retorna la cantidad de mujeres que hay en la lista
      */
     public int cantMujeres() {
-        return 0;
+        int cont = 0;
+        Paciente p = primero;
+        while(p != null) {
+            if (p.darSexo() == 2)
+                cont += 1;
+            p = p.darSiguiente();
+        }
+        return cont;
     }
 
     /**
